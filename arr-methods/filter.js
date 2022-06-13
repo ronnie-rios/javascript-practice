@@ -17,3 +17,25 @@ function checkWords(words) {
 }
 
 console.log(wordsResult)
+
+//filter by 
+const items = [
+    {
+        name: 'momo',
+        id: 1
+    },
+    {
+        name: 'biscuit',
+        id: 2
+    },
+    {
+        name: 'ajax',
+        id: 3
+    },
+]
+
+const filterById = items.filter()
+
+// function checkById(items) {
+//     for (i in items)
+// }
