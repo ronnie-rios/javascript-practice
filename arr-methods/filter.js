@@ -37,6 +37,4 @@ const items = [
 //takes in the .id 
 const filterById = items.filter(item => item.id > 1)
 console.log(filterById)
-// function checkById(items) {
-//     for (i in items)
-// }
+
