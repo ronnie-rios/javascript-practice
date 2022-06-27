@@ -33,9 +33,10 @@ const items = [
         id: 3
     },
 ]
-
-const filterById = items.filter()
-
+//filters by id greater than 1
+//takes in the .id 
+const filterById = items.filter(item => item.id > 1)
+console.log(filterById)
 // function checkById(items) {
 //     for (i in items)
 // }
