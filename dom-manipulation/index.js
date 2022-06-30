@@ -21,10 +21,15 @@ let button = document.getElementById('displayBtn')
 
 function displayData() {
     data.forEach(cat => {
+        //display cats
         let todoList = document.getElementById('to-do')
         let catNameEle = document.createElement('h2')
-        catNameEle.innerText = cat.name
+        catNameEle.innerText = `name: ${cat.name}`
         todoList.append(catNameEle)
+        //display hobbies
+        let hobbyElement = document.createElement('h4')
+        hobbyElement.innerText = `hobby ${cat.hobbies}`
+        todoList.append(hobbyElement)
     });
 }
 
