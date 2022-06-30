@@ -24,9 +24,9 @@ function displayData() {
         let todoList = document.getElementById('to-do')
         let catNameEle = document.createElement('h2')
         catNameEle.innerText = cat.name
-        catNameEle.append(todoList)
+        todoList.append(catNameEle)
     });
 }
 
-button.addEventListener("click", displayData(), console.log('clicked')) 
+button.addEventListener("click", displayData, console.log('clicked')) 
 
