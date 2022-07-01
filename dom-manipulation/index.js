@@ -38,9 +38,7 @@ button.addEventListener("click", displayData)
 
 //fetching data
 const apiUrl = 'https://jsonplaceholder.typicode.com/posts'
-
-
-console.log(showPostBtn)
+let postSection = document.getElementById('post-section')
 
 window.onload = async () => {
     getPosts()
@@ -54,6 +52,7 @@ async function getPosts() {
         console.log(first10)
         first10.forEach(post => {
             displayPosts(post)
+            createButton()
         })
     } catch (error) {
         console.log(error)
@@ -61,9 +60,19 @@ async function getPosts() {
 }
 
 function displayPosts(post) {
-    let postSection = document.getElementById('post-section')
+    //create posts
     let postTitle = document.createElement('h3')
     postTitle.innerText = `title: ${post.title}`
     postSection.append(postTitle)
 }
 
+function createButton() {
+    //add button
+    let deleteButton = document.createElement('button')
+    deleteButton.append(postSection)
+    deleteButton.addEventListener("click", removePosts)
+}
+
+function removePosts() {
+    postTitle.innerText("")
+}
