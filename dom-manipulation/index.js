@@ -15,9 +15,10 @@ const data = [
         hobbies: 'racing'
     },
 ]
+//append lets append strings while appendChild requires an element
+
 
 let button = document.getElementById('displayBtn')
-
 
 function displayData() {
     data.forEach(cat => {
@@ -33,5 +34,36 @@ function displayData() {
     });
 }
 
-button.addEventListener("click", displayData, console.log('clicked')) 
+button.addEventListener("click", displayData) 
+
+//fetching data
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts'
+
+
+console.log(showPostBtn)
+
+window.onload = async () => {
+    getPosts()
+}
+
+async function getPosts() {
+    try {
+        let response = await fetch(apiUrl)
+        let data = await response.json()
+        const first10 = data.slice(0 , 10)
+        console.log(first10)
+        first10.forEach(post => {
+            displayPosts(post)
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+function displayPosts(post) {
+    let postSection = document.getElementById('post-section')
+    let postTitle = document.createElement('h3')
+    postTitle.innerText = `title: ${post.title}`
+    postSection.append(postTitle)
+}
 
