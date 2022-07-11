@@ -18,3 +18,16 @@ function reverseString2(str) {
     return reverseStr
 }
 reverseString2('tikzib')
+
+//no reverse version 2
+function reverseStr3(str){
+    //turn into arr
+    //reduce into single value
+    //reversed str first, then our arr
+    //set char into reversed
+    //will return a string 
+    return str.split('').reduce((reversed, char) => {
+        return char + reversed
+    }, '')
+}
+reverseString3('tikzib')
