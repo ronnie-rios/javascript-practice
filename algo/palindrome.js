@@ -1,4 +1,4 @@
-function checkAnagram(first, second) {
+function checkPalindrome(first, second) {
     let firstStringArrNoSpace = []
     let secondStringArrNoSpace = []
     //account for spaces
@@ -18,11 +18,11 @@ function checkAnagram(first, second) {
     secondStringArrNoSpace = second.toLowerCase().split("").sort().join("")
 
     if(firstStringArrNoSpace === secondStringArrNoSpace) {
-        console.log("you got an anagram")
+        console.log("you got an palindrom")
     } else {
-        console.log("not an anagram")
+        console.log("not an palindrom")
     }
 
 }
 
-checkAnagram("ronnie","einnor")
+checkPalindrome("ronnie","einnor")
