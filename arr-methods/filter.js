@@ -38,3 +38,8 @@ const items = [
 const filterById = items.filter(item => item.id > 1)
 console.log(filterById)
 
+function filterName(name) {
+    return items.filter(itemName => itemName.name ===name)
+}
+console.log(filterName('ajax'))
+
