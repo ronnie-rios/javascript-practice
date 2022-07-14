@@ -19,3 +19,9 @@ const items = [
 ]
 //finds the obj with the id of 1
 console.log(items.find(cat => cat.id === 1))
+
+function findByName(name) {
+    return items.filter(cat => cat.name === name.toLowerCase())
+}
+
+console.log(findByName('Biscuit'))
