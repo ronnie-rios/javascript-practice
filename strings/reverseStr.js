@@ -31,3 +31,19 @@ function reverseStr3(str){
     }, '')
 }
 reverseString3('tikzib')
+
+function reverseStr4(str) {
+    if (!str || str.length <2 || typeof str !=='string') {
+        return 'not good'
+    }
+    const reverse = [];
+    const length = str.length -1;
+
+    for(let i = length; i >= 0; i--) {
+        reverse.push(str[i]);
+    }
+
+    return reverse.join('');
+}
+
+console.log(reverseStr4('tikzib'))
