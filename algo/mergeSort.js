@@ -38,3 +38,5 @@ function mergeSortedArr(arr1, arr2) {
     return newArr;
 }
 console.log(mergeSortedArr(arr1, arr2));
+
+//optimize by refactoring line 25 in to its own helper function
