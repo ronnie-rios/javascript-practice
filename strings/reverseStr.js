@@ -5,6 +5,9 @@ function reverseString(str) {
    
 reverseString("hello");
 
+//es6
+const fancyReverse = str => [...str].reverse().join('');
+
 //no reverse method
 function reverseString2(str) {
     //create an empty str
