@@ -28,10 +28,21 @@ class HashTable {
           if (currentBucket[i][0]=== key) {
             return currentBucket[i][1]
           }
-        }
+        }//O(1)
         console.log(this.data);
       }
       return undefined
+    }
+    //grabbing from the arr
+    keys() {
+      const keysArr = [];
+      for (let i=0;i < this.data.length; i++) {
+        if (this.data[i]) {
+          //array within an array cause its buckets
+          keysArr.push(this.data[i][0][0])
+        }
+      }
+      return keysArr;
     }
   }
   //given 50 shelves of memories
