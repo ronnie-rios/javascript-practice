@@ -50,4 +50,21 @@ class LinkedList {
         this.length++
         return this
     }
+    printList() {
+        //empty arr
+        const arr = []
+        //get the value
+        let currentNode = this.head
+        //while there is no null
+        while(currentNode !==null) {
+            //push the value to the head
+            arr.push(currentNode)
+            //then set thehead to the pointer
+            currentNode = currentNode.next
+        }
+        return arr
+    }
+    insert(index, value) {
+
+    }
 }
