@@ -93,7 +93,16 @@ class LinkedList {
         return currentNode;
     }
     remove(index) {
-        
+        //check params
+        //find
+        const leader = this.traversToIndex(index - 1)
+        // = the node after the unwanted
+        const unwantedNode = leader.next
+        //set it
+        leader.next = unwantedNode
+        this.length--
+        return this.printList()
+
     }
 }
 
