@@ -92,6 +92,9 @@ class LinkedList {
         }
         return currentNode;
     }
+    remove(index) {
+        
+    }
 }
 
 const myLinkedList = new LinkedList(15);
