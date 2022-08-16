@@ -12,6 +12,13 @@
 //         }
 //     }
 // }
+ //creating empty node
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.next = null
+    }
+}
 
 class LinkedList {
     constructor(value) {
@@ -23,11 +30,8 @@ class LinkedList {
         this.length = 1
     }
     append(value) {
-        //creating empty node
-        const newNode ={
-            value: value,
-            next: null
-        }
+        //create
+       const newNode = new Node(value)
         //points to new node
         this.tail.next = newNode;
         //then the tail is equal to null cause its assigned above
@@ -36,10 +40,8 @@ class LinkedList {
         return this
     }
     prepend(value) {
-        const newNode ={
-            value: value,
-            next: null
-        }
+        //create
+        const newNode = new Node(value)
         //pointing to the head or first item
         newNode.next = this.head
         //now the head will update with new value
