@@ -102,6 +102,25 @@ class LinkedList {
         leader.next = unwantedNode
         this.length--
         return this.printList()
+    }
+    reverse() {
+        if(!this.head.next) {
+            return this.head
+        }
+        //first item
+        let first = this.head
+        this.tail = this.head
+        let second = first.next
+        //if that node exist
+        while(second) {
+            //holds the pointer that is going to point to prev
+            let temp = second.next
+            second.next = first
+            first = second
+            second = temp
+        } 
+        this.head.next = null
+        this.head = first
 
     }
 }
