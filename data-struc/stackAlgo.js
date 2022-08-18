@@ -51,9 +51,18 @@ class Node {
 
 class ArrStack {
     constructor(){
-        this.top = null;
-        this.bottom = null;
-        this.length = 0;
-      }  
+        this.arr = []
+      }
+    peek() {
+        return this.arr[this.arr.length -1];
+    }
+    push(value) {
+        this.arr.push(value)
+        return this
+    }
+    pop() {
+        this.arr.pop()
+        return this
+    }
 }
   
