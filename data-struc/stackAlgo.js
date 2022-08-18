@@ -32,6 +32,9 @@ class Node {
         if (!this.top) {
             return null
         }
+        if (this.length === 0){
+            this.bottom = null
+        }
         //const holdingPointer = this.top;
         //set it to the prev one
         this.top = this.top.next;
