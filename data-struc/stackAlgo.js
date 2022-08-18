@@ -3,7 +3,7 @@ class Node {
       this.value = value;
       this.next = null;
     }
-  }
+}
   
   class Stack {
     constructor(){
@@ -42,10 +42,18 @@ class Node {
         return this
     }
     //isEmpty
-  }
+}
   
   const myStack = new Stack();
   myStack.push(15)
   myStack.push(25)
   console.log(myStack);
+
+class ArrStack {
+    constructor(){
+        this.top = null;
+        this.bottom = null;
+        this.length = 0;
+      }  
+}
   
