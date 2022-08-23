@@ -12,7 +12,7 @@ class Node {
     }
     insert(value){
       //Code here
-      const newNode = Node(value)
+      const newNode = new Node(value)
       if (this.root === null) {
         this.root = newNode
       } else {
@@ -37,7 +37,22 @@ class Node {
       }
     }
     lookup(value){
-      //Code here
+      //if root doesn't exist return false
+      if(!this.root) {
+        return false
+      }
+      let currentNode = this.root;
+      //divide and conquer, make a decision to go either left or right
+      while(currentNode) {
+        if (value < currentNode.value) {
+          currentNode = currentNode.left
+        } else if (value > currentNode.value) {
+          currentNode = currentNode.right
+        } else if (currentNode.value === value) {
+          return currentNode
+        }
+      }
+      return false;
     }
     // remove
   }
@@ -50,6 +65,8 @@ class Node {
   tree.insert(170)
   tree.insert(15)
   tree.insert(1)
+  console.log(tree)
+  console.log(tree.lookup(9))
   JSON.stringify(traverse(tree.root))
   
   //     9
