@@ -7,19 +7,23 @@
 
 function fibonacciIterative(n){
     //code here;
+    //initial items
     let a = 0
     let b = 1
     let c = n
     for (let i = 2; i <=n; i++) {
         c = a + b;
+        console.log(c)
         a = b
+        console.log(a)
         b = c
+        console.log(b)
         console.log(c)
     }
     return c
 }
 
-fibonacciIterative(8);
+fibonacciIterative(4);
   
 function fibonacciRecursive(n) {
     //becuse 2 will always have 1
