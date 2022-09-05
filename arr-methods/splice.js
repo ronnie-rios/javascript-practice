@@ -16,6 +16,8 @@ numbers.splice(startIndex, amountToDelete, 13, 14);
 //Note that there can be any number of elements (separated by commas) following amountToDelete, each of which gets inserted.
 console.log(numbers);
 
+console.log(numbers.splice(3,1, 13))
+
 function htmlColorNames(arr) {
     // Only change code below this line
   arr.splice(0,2, 'DarkSalmon', 'BlanchedAlmond')
