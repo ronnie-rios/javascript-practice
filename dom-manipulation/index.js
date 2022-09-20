@@ -19,11 +19,11 @@ const data = [
 
 
 let button = document.getElementById('displayBtn')
+let todoList = document.getElementById('to-do')
 
 function displayData() {
     data.forEach(cat => {
         //display cats
-        let todoList = document.getElementById('to-do')
         let catNameEle = document.createElement('h2')
         catNameEle.innerText = `name: ${cat.name}`
         todoList.append(catNameEle)
@@ -33,6 +33,13 @@ function displayData() {
         todoList.append(hobbyElement)
     });
 }
+// function displayData2(text) {
+//     let catNameEle = document.createElement('h2');
+//     catNameEle.innerText = text
+//     todoList.append(catNameEle)
+//     return todoList
+// }
+// data.map(displayData2)
 
 button.addEventListener("click", displayData) 
 
