@@ -14,3 +14,6 @@ const items = [
 ]
 
 items.map(item => console.log(item.name))
+
+
+items.map(item => item.id = Math.random())
