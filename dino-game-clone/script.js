@@ -11,11 +11,13 @@ function jump() {
 };
 
 let isAlive = setInterval(() => {
-    //check y position of our dino and cactus
+    //check y and x position of our dino and cactus
     let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
     let cactusLeft = parseInt(window.getComputedStyle('cactus').getPropertyValue('left'));
 
-    
+    if (cactusLeft < 50  &&  cactusLeft > 0 && dinoTop >= 140) {
+        alert('game over')
+    }
 }, 10)
 
 
