@@ -37,3 +37,4 @@ function maxChar(str) {
     return maxChar;
 }
 console.log(maxChar(str))
+console.log(maxChar(str))
