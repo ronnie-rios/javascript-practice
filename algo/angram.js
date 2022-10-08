@@ -33,11 +33,20 @@ function buildCharMap(str) {
     return charMap;
 
 }
+//.replace(/[^\w/g,""]/)
 
 
 console.log(anagrams('momo', 'moom'));
 
-//.replace(/[^\w/g,""]/)
+function anagrams2(strA, strB) {
+    return cleanString(strA) === cleanString(strB)
+}
+
+function cleanString(str) {
+    return str.replace(/[^\w/g,""]/).toLowerCase().split('').sort().join('')
+}
+
+
 
 const isAnagram = function(s, t) {
     if(s.length !== t.length) return false
