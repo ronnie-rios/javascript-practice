@@ -24,3 +24,5 @@ function chunk2(array, size) {
     }
     return chunked;
 }
+
+console.log(chunk2(arr2, 2))
