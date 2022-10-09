@@ -7,4 +7,11 @@ const slicedArr = cats.slice(0, 1)
 const newArr = [...slicedArr, cats]
 console.log(newArr)
 
-console.log(newArr.flat())
+const flatArr = newArr.flat()
+
+console.log(flatArr, 'flat arr stored');
+
+flatArr.forEach((cat) => {
+    cat += ' is the best'
+    console.log(cat)
+})
