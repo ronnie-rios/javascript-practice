@@ -10,7 +10,7 @@ const countSubStrings = (s) => {
     //loop through the arr
     arr.forEach((element, index) => {
         count++
-        if(ele == arr[index]) {
+        if(element == arr[index]) {
             count++
         }
     });
