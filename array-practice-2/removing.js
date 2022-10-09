@@ -6,3 +6,5 @@ console.log(cats, 'after')
 const slicedArr = cats.slice(0, 1)
 const newArr = [...slicedArr, cats]
 console.log(newArr)
+
+console.log(newArr.flat())
