@@ -17,4 +17,18 @@ function vowels(str) {
     return vowels
 
 }
-console.log(vowels('hi momo'))
+console.log(vowels('hi momo'));
+
+function vowelsBetter(str) {
+    let count = 0;
+    const checker = ['a','e','i','o','u'];
+
+    for(let char of str) {
+        if(checker.includes(char)) {
+            count++
+        }
+    }
+    return count;
+}
+
+console.log(vowelsBetter('hi momo'))
