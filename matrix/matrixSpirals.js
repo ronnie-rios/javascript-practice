@@ -16,3 +16,28 @@
         //increment counter
     //decrement end row
     //repeat
+
+    function matrix(n) {
+        const results = [];
+        
+        for (let i = 0; i < n; i++) {
+            //can assing values to indices of an array that have not yet been assign
+            results.push([])   
+        }
+        //end will always be n - 1
+        let counter = 1;
+        let startColumn = 0;
+        let endColumn = n - 1;
+        let startRow = 0;
+        let endRow = n - 1;
+
+        while(startColumn <= endColumn && startRow <= endRow) {
+            
+        }
+
+    }
+
+
+    const arr =[];
+    arr[3] = 'momo'
+    //will yield [null, null, null, 'momo']
