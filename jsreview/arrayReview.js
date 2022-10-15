@@ -27,3 +27,14 @@ stuff[1] = 'momo land'
 //splice is good for inserting and deleting
 stuff.splice(0, 0, 'bizkit')
 console.log(stuff)
+
+const chickens = ['momo', 'biscuit', 'jaxon', 'momo2', 'bizkit2']
+//slice => returns a copy of the arr
+//slice takes in the start and end as parameters, end is not inclusive
+const newChickens = chickens.slice(2, 4)
+console.log(newChickens)
+
+//indexOf => returns FIRST instance of the element it finds
+//lastIndexOf() starts from the right
+//works with primitives not reference
+console.log(chickens.indexOf('biscuit'))
