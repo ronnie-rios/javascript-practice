@@ -44,4 +44,15 @@ console.log(chickens.indexOf('biscuit'))
 const chickenData = [ { name: 'momo' }, { name: 'bizkit' }, { name: ' jaxon' }]
 
 const momo = chickenData.find((chicken) => chicken.name=== 'momo')
-console.log(momo)
+console.log(momo);
+
+
+//forEach method
+const prices = [10, 15, 29,30]
+const tax = 2
+const taxAdjust = [];
+
+prices.forEach((price) => {
+    taxAdjust.push(price * tax)
+});
+console.log(taxAdjust, 'after tax')
