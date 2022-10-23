@@ -55,4 +55,14 @@ const taxAdjust = [];
 prices.forEach((price) => {
     taxAdjust.push(price * tax)
 });
-console.log(taxAdjust, 'after tax')
+console.log(taxAdjust, 'after tax');
+
+//map is better cause you dont have to manage the new arr
+
+const data = [ 2, 4, 6, 8]
+const triple = 3
+
+const newData = data.map((ele) => {
+   return ele * triple
+});
+console.log(newData)
