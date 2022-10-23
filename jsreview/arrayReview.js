@@ -66,3 +66,11 @@ const newData = data.map((ele) => {
    return ele * triple
 });
 console.log(newData)
+
+//REDUCE (dont use last two too much)
+//takes the prevValue, curValue, curIndex, array
+//can do a lot reduce an arr to a simpler value
+const newSum = data.reduce((prevValue, curValue) => {
+    //return the current value
+    return prevValue, curValue
+}, 0)
