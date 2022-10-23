@@ -34,7 +34,14 @@ const chickens = ['momo', 'biscuit', 'jaxon', 'momo2', 'bizkit2']
 const newChickens = chickens.slice(2, 4)
 console.log(newChickens)
 
-//indexOf => returns FIRST instance of the element it finds
+//indexOf => returns FIRST instance of the element it finds, returns -1 if nothing found
 //lastIndexOf() starts from the right
 //works with primitives not reference
 console.log(chickens.indexOf('biscuit'))
+
+//find() => takes an argument, but another function
+
+const chickenData = [ { name: 'momo' }, { name: 'bizkit' }, { name: ' jaxon' }]
+
+const momo = chickenData.find((chicken) => chicken.name=== 'momo')
+console.log(momo)
