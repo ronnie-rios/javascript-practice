@@ -12,11 +12,32 @@ function fib(n) {
 
 console.log(fib(4));
 //exponential run time
-function fibRecu(n) {
+function slowFib(n) {
     if (n < 2) {
         return n
     }
-    return fibRecu(n-1) + fibRecu(n -2)
+    return slowFib(n-1) + slowFib(n -2)
 }
 
-console.log(fibRecu(4), 'recursive')
+console.log(slowFib(4), 'recursive')
+
+//memoization
+//pass in a function
+function memoizedFib(fn) {
+    const cache = {}; //our container to use for ref
+    //this is our anonymous function, and since it may recieve multiple args
+    //use the rest operator
+    return function(...args) {
+        if(cache[args]) {
+            //if something exist in our 'memory' return it
+            return cache[args];
+        }
+        //result of slowfib
+        const result = fn.apply(this, args)
+        cache[args] = result;
+        console.log(result)
+        return result;
+    }
+};
+//setting this variable to run slowfib as an arg
+const fibM = memoizedFib(slowFib)
