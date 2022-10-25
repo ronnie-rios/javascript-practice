@@ -11,7 +11,7 @@ function fib(n) {
 }
 
 console.log(fib(4));
-
+//exponential run time
 function fibRecu(n) {
     if (n < 2) {
         return n
