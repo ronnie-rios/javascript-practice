@@ -20,5 +20,25 @@ class Queue {
             //adding the popped off record from 1 to 2
             this.second.push(record)
         }
+
+        const record = this.second.pop()
+        //doing from second
+        while(this.second.peek()) {
+            //one record add a time and add to first
+            this.first.push(this.second.pop())
+        }
+        return record;
+    }
+
+    peek() {
+        while (this.first.peek()) {
+            this.second.push(this.first.pop())
+        }
+        //ref
+        const record = this.second.peek();
+        while(this.second.peek()) {
+            this.first.push(this.second.pop())
+        }
+        return record
     }
 }
