@@ -23,3 +23,8 @@ const chicken1 = { name: 'momo' }
 const chicken2 = { name: 'bizkit '}
 
 const chickenData = new Map([[chicken1, [ { food: 'food', price: 15 } ]]])
+//extra info to attach to an obj, and won't mutate original object
+//can access properties with get()
+//can add properties with set()
+//access the map with entries, and can access the array with two elements, first ele is key and second is value
+//maps have any values and types as keys while objects can only use strings and numbers
