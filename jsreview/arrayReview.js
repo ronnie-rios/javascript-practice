@@ -74,3 +74,33 @@ const newSum = data.reduce((prevValue, curValue) => {
     //return the current value
     return prevValue, curValue
 }, 0)
+
+const numbers = [2, 8, 10, 15, 25, 30]
+
+const greaterThanFive = numbers.filter(num => num > 5)
+console.log(greaterThanFive)
+
+const numObj = numbers.map((num) => {
+    return obj = {
+        container: num
+    }
+});
+console.log(numObj)
+
+const reducedNums = numbers.reduce((prev, curr) => {
+    return prev * curr
+});
+console.log(reducedNums);
+
+function findLargest(x,y,z,a) {
+    const container = new Array(x,y,z,a);
+    let curMax = container[0]
+   for(const num of container) {
+    if(num > curMax) {
+        curMax = num
+    }
+   }
+    return curMax
+    
+};
+console.log(findLargest(2,4,6, 8))
