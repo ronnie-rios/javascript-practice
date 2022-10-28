@@ -17,3 +17,9 @@ console.log(ids.has(2)) //will check if it has 2, returns true or false
 //sets values are unique
 
 //entries() returns an iterable
+
+//MAPS
+const chicken1 = { name: 'momo' }
+const chicken2 = { name: 'bizkit '}
+
+const chickenData = new Map([[chicken1, [ { food: 'food', price: 15 } ]]])
