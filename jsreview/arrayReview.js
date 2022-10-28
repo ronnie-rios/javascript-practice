@@ -75,7 +75,7 @@ const newSum = data.reduce((prevValue, curValue) => {
     return prevValue, curValue
 }, 0)
 
-const numbers = [2, 8, 10, 15, 25, 30]
+const numbers = [2, 8, 10, 15, 15, 25, 30]
 
 const greaterThanFive = numbers.filter(num => num > 5)
 console.log(greaterThanFive)
@@ -95,12 +95,21 @@ console.log(reducedNums);
 function findLargest(x,y,z,a) {
     const container = new Array(x,y,z,a);
     let curMax = container[0]
+    let curMin = container[0]
    for(const num of container) {
     if(num > curMax) {
         curMax = num
     }
    }
-    return curMax
+   for(const num of container) {
+    if (num < curMin) {
+        curMin = num
+    }
+   }
+    return [curMax, curMin]
     
 };
 console.log(findLargest(2,4,6, 8))
+
+const noDupes = new Set(numbers);
+console.log(noDupes)
