@@ -7,3 +7,8 @@
 #err {
     color: red;
 }
+
+#form {
+    padding-bottom: 2em;
+    padding-left: 1em;
+}
