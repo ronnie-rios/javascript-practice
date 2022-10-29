@@ -1,0 +1,9 @@
+.container {
+    background-color: ghostwhite;
+    padding: 2;
+    border: 2px solid black;
+}
+
+#err {
+    color: red;
+}
