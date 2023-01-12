@@ -19,5 +19,8 @@ var x = {
     }
 }
 
-x.method(y, 1) //calls the x obj and the method, which takes in y and 1, which executes
+//x.method(y, 1) //calls the x obj and the method, which takes in y and 1, which executes
 //y, and whatever y gives this.length but due to argments it points to length of the arguments
+
+const z ='constructor'
+console.log(z[z](01));
