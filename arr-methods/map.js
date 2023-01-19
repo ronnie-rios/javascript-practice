@@ -1,3 +1,4 @@
+
 const items = [
     {
         name: 'momo',
@@ -17,3 +18,12 @@ items.map(item => console.log(item.name))
 
 
 items.map(item => item.id = Math.random())
+nums = [1, 2, 3, 4];
+
+let a = [];
+console.log(a);
+const newArray = nums.forEach((num) => {
+  a.push(num);
+  
+});
+console.log(a);
