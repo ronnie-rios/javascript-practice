@@ -37,3 +37,27 @@
         - Resource: list of resources to which the action is applied to
         - Condition: condidtions for when 
     - from the above, Effect, Principal, Action, Resource are most prominent
+
+## IAM pw policy
+- min length and char reqs
+- req sers to change their pw after set time
+- prevent pw reuse
+- helpful against bruteforce
+
+## MFA - multi-factor
+- must use
+- users have access to your account
+- protect the root account and your IAM users
+- MFA - combination of PW + device you own
+- virtual MFA: two ways -
+    - google authenticator (phone only)
+    - AUTHY multi-device
+- u2f - universal security, yubikey (3rd party), like physical device the user needs to hit
+
+## In AWS console
+- account settings => pw policy
+    - set PW accounts
+    - protect the root, don't lose the MFA account
+
+## Access keys
+- don't share access keys 
