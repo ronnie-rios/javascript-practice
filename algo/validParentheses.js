@@ -27,3 +27,14 @@ const validParentheses = function(s) {
      return stack.length === 0;
    
 };
+// for only parentheses not {} || []
+function validParentheses(parens){
+    var n = 0;
+    for (var i = 0; i < parens.length; i++) {
+      if (parens[i] == '(') n++;
+      if (parens[i] == ')') n--;
+      if (n < 0) return false;
+    }
+    
+    return n == 0;
+  }
