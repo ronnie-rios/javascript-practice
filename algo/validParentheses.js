@@ -6,11 +6,11 @@ const validParentheses = function(s) {
         return false;
     }
     //map of keys to check
-    const checkMap = ({
+    const checkMap = {
         "(": ")",
         "{": "}",
         "[": "]"
-    });
+    };
     //arr to hold our check
     const stack = [];
     //loop through each char in our str
