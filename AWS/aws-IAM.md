@@ -61,3 +61,22 @@
 
 ## Access keys
 - don't share access keys 
+
+## creating roles
+- create role > aws service => most common ec2 or lambda
+
+## security for IAM
+- credentials report => acount level
+    - report that lists all users accoutns and status
+- iam access advisor
+    - user level
+    - shows permissions for a user and when the services were last accesses
+
+    # generating a credential report
+    - generates a CSV file with users, creation, pw enabled, last used etc more details
+
+## summary
+- users: mapped to a physical user, has a pw for console
+- groups: contains users only
+- policies: json document
+- roles: an IAM entitity that has set permissions for making requests to AWS
