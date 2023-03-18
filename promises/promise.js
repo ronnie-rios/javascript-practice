@@ -18,3 +18,9 @@ console.log('after the promise, line 17');
 console.log('after the promise, line 18');
 console.log('after the promise, line 19');
 console.log('after the promise, line 20');
+
+
+const resolved = new Promise((resolve, reject) => {
+    'hi'
+})
+console.log(resolved);
