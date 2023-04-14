@@ -36,12 +36,19 @@ spring.mvc.view.prefix=/WEB-INF/
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-jpa</artifactId>
 </dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-validation</artifactId>
+</dependency>   
 
 #### application properties
 spring.datasource.url=jdbc:mysql://localhost:3306/<<YOUR_SCHEMA>>
 spring.datasource.username=<<dbuser>>
 spring.datasource.password=<<dbpassword>>
 spring.jpa.hibernate.ddl-auto=update
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.mvc.hiddenmethod.filter.enabled=true
 
 ### Date
 ```
