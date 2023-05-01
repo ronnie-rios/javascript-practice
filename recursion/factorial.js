@@ -18,5 +18,14 @@ function findIterative(num) {
     }
     return result
 }
+
+function factorial(num) {
+    let result = num;
+    for(let i =1; i < num; i++) {
+        result = result * i
+    }
+    return result
+}
 console.log(findRecursive(5))
-console.log(findIterative(5))
+console.log(findIterative(3))
+console.log(factorial(3));
