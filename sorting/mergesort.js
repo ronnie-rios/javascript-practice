@@ -1,22 +1,35 @@
-const nums = [4,1,3,2,6,5];
+const nums = [4, 1, 3, 2, 6, 5];
 
 function partition(arr) {
-    let length = arr.length;
-    //basecase
-    if(length <= 1) { return; };
-    
-    //get middle
-    let middle = length /2
+  let length = arr.length;
+  //basecase
+  if (length <= 1) {
+    return;
+  }
 
-    let leftArr = middle
-    let rightArr = length - middle
+  //get middle
+  let middle = length / 2;
 
-    let i =0;
-    let j =0;
+  const left = arr.slice(0, mid);
+  const right = arr.slice(mid);
 
-    for(let i; i < arr.length; i++) {
-        if(i<middle) {
-            leftArr[i]
-        }
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right) {
+  const result = [];
+  let i = 0;
+  let j = 0;
+
+  while (i < left.length && j < right.length) {
+    if (left[i] < right[j]) {
+      result.push(left[i]);
+      i++;
+    } else {
+      result.push(right[j]);
+      j++;
     }
+  }
+
+  return result.concat(left.slice(i)).concat(right.slice(j));
 }
