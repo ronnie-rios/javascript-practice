@@ -46,17 +46,17 @@ const object1 = {
     returnPickupOrders: [],
 };
 
-const expected1 = [
-    { id: 106, type: "credited" },
-    { id: 108, type: "credited" },
-    { id: 110, type: "delivered" },
-    { id: 115, type: "delivered" },
-    { id: 112, type: "pickup" },
-    { id: 117, type: "pickup" },
-    { id: 123, type: "delivery" },
-    { id: 153, type: "delivery" },
-    { id: 163, type: "pickup" },
-];
+// const expected1 = [
+//     { id: 106, type: "credited" },
+//     { id: 108, type: "credited" },
+//     { id: 110, type: "delivered" },
+//     { id: 115, type: "delivered" },
+//     { id: 112, type: "pickup" },
+//     { id: 117, type: "pickup" },
+//     { id: 123, type: "delivery" },
+//     { id: 153, type: "delivery" },
+//     { id: 163, type: "pickup" },
+// ];
 
 
 
