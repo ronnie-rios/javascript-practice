@@ -7,24 +7,28 @@ const objects = [
 const query = { first: "momo", age: 5 };
 //return the items from array that hve both keyvalues
 
-function find(query, arr) {
-  const result = [];
-  for (const item of arr) {
-    let found = true;
-    for (const key in query) {
-      if (
-        item.hasOwnProperty(key) === false ||
-        item[item] !== query[item]
-      ) {
-        found = false;
-        break;
+function find(query, list) {
+  const found = []
+
+  for(const item of list) {
+    let isMatch = true
+    for(const key in query) {
+      const search = query[key]
+
+      if(item.hasOwnProperty(key) === false || item[key] !==search) {
+        isMatch = false;
+        break
       }
     }
-    if (found) {
-      result.push(item);
+    if(isMatch) {
+      found.push(item)
     }
   }
-  return result
+  return found;
 }
 
-console.log(find(query, objects));
+const find2 = (query, list) => {
+  return list.filter( item =>Object.keys(query).every(key => item[key]===query[key]))
+}
+
+console.log(find2(query, objects));
