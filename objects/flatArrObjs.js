@@ -45,7 +45,13 @@ const object1 = {
 
     returnPickupOrders: [],
 };
-
+const expected1 = [
+    { id: 112, type: "pickup" },
+    { id: 117, type: "pickup" },
+    { id: 123, type: "delivery" },
+    { id: 153, type: "delivery" },
+    { id: 123, type: "pickup" },
+  ];
 // const expected1 = [
 //     { id: 106, type: "credited" },
 //     { id: 108, type: "credited" },
@@ -60,5 +66,9 @@ const object1 = {
 
 
 
-const functionalFlattenObjectOfArrays = obj =>  Object.values(obj).flat().map(({id, type}) => { return {id, type}})
-console.log(functionalFlattenObjectOfArrays(object1));
+function find(obj) {
+    const found = Object.values(obj).flat().map(({id, type }) => ({ id, type } ))
+    return found
+}
+
+console.log(find(object1))
