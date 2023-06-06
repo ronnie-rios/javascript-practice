@@ -5,13 +5,13 @@ function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     //set curr index as minimum
     let min = i;
-    let temp = arr[i];
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[j] < arr[min]) {
         //update min if current is lower than prev
         min = j;
       }
     }
+    let temp = arr[i];
     arr[i] = arr[min];
     arr[min] = temp;
   }
@@ -20,19 +20,22 @@ function selectionSort(arr) {
 
 console.log(selectionSort(numbers));
 
-function selectSort(arr) {
-  for (let i = 0; i < arr.length; i++) {
+
+const selectSort = numbers => {
+  for(let i =0;i< numbers.length;i++) {
     let min = i;
-    for (let j = i+1; j < arr.length; j++) {
-      if (arr[min] > arr[j]) {
-        min = j;
+    for(let j=i+1; j<numbers.length;j++) {
+      if(numbers[j] < numbers[min]) {
+        //if its smaller swap the min index with the j index
+        min = j
       }
+      //set a temp to swap
+      let temp = numbers[i]
+      numbers[i] = numbers[min]
+      numbers[min]= temp
     }
-    let temp = arr[i];
-    arr[i] = arr[min];
-    arr[min] = temp;
   }
-  return arr;
+  return numbers
 }
 
 console.log(selectSort(numbers));
