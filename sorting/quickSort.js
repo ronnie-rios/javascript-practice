@@ -31,7 +31,7 @@ function partition(array, pivot, left, right){
 }
 
 function swap(array, firstIndex, secondIndex){
-    var temp = array[firstIndex];
+    let temp = array[firstIndex];
     array[firstIndex] = array[secondIndex];
     array[secondIndex] = temp;
 }
