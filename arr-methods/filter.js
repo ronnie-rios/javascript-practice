@@ -43,3 +43,9 @@ function filterName(name) {
 }
 console.log(filterName('ajax'))
 
+
+const nums = [1,2,3,4]
+//return the nums > 2
+nums.filter(function(number) {
+    return number > 2
+})
