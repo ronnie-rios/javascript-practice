@@ -20,12 +20,15 @@ function find(query, list) {
         //end it here
          matching = false //we know its false
        // break;
-      } 
+      } else {
+        found.push(item)
+
+      }
     }
-    //check if this valid
-    if(matching) {
-      found.push(item)
-    }
+    // //check if this valid
+    // if(matching) {
+    //   found.push(item)
+    // }
   }
   return found
 }
