@@ -65,21 +65,60 @@ class SLL {
   insertAtFront(data) {
     // [2 | 3] - [3 ] current list
     //instantiate the new node
-   const newNode = new ListNode(data); //data = [1]
-   //[1] set the next to the current head
-   //[ 1 | 2] the 2 is the old head, but now it's the next of our new node
-   newNode.next = this.head;
-   //set the head = the data
-   this.head = newNode // now the 1 is at the start, with its next pointing to old head
+    const newNode = new ListNode(data); //data = [1]
+    //[1] set the next to the current head
+    //[ 1 | 2] the 2 is the old head, but now it's the next of our new node
+    newNode.next = this.head;
+    //set the head = the data
+    this.head = newNode; // now the 1 is at the start, with its next pointing to old head
+  }
+
+  contains(data) {
+    let current = this.head;
+    while (current) {
+      if (current.data === data) {
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
+
+  // remove the last node of a SLL
+  removeBack() {
+    //create our runner
+    let current = this.head;
+
+      //if only 1 remove it
+    if(!current.next) {
+      this.head = null;
+      return;
+    }
+
+    //while current exists
+    while(current) {
+      //check if the next . next = null
+      if(current.next.next === null) {
+        //set our curr to null
+        current.next = null
+      }
+      current = current.next;
+    }
+  }
+
+  // BONUS
+  average() {
+    // loop through the SLL
+    //find the average of all nodes
   }
 
   removeHead() {
-    if(this.isEmpty()) {
-      return null
+    if (this.isEmpty()) {
+      return null;
     }
     //set the head
-    const oldHead = this.head // set it to the head
-    this.head = oldHead.next // overwrite the head with the next node
+    const oldHead = this.head; // set it to the head
+    this.head = oldHead.next; // overwrite the head with the next node
   }
 }
 
