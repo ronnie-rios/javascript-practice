@@ -63,6 +63,35 @@ class BinarySearchTree {
 
     this.print(node.left, spaceCnt);
   }
+
+  insert(newVal) {
+    //create the new node
+    const newNode = new BSTNode(newVal);
+    if(this.isEmpty()) {
+      this.root = newNode;
+      return;
+    }
+    //keep track of our pointer;
+    let current = this.root;
+
+    while(current !== null) {
+      if(newVal <= current.data) {
+        //once we hit null, we can set it
+        if(current.left ===null) {
+          current.left = newNode;
+          return this;
+        }
+        //if it not null we overwrite the pointer
+        current = current.left;
+      } else {
+        if(current.right === null) {
+          current.right = newNode;
+          return this;
+        }
+        current = current.right;
+      }
+    }
+  }
 }
 
 const emptyTree = new BinarySearchTree();
