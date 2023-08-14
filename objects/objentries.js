@@ -7,8 +7,9 @@ const obj = {
 
 function extract(obj) {
   const result = [];
-  for (const item in obj) {
-    result.push([item, obj[item]])
+  for (const key in obj) {
+    if(obj.hasOwn(obj, key))
+    result.push([key, obj[key]])
   }
   return result
 }
