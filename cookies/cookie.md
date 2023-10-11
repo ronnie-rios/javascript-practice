@@ -43,3 +43,38 @@ They can include attributes like domain and path to control their scope.
 Cookies can be read and modified using JavaScript on the client side.
 When a cookie's expiration date is set to a past date, it's effectively deleted.
 Cookies can be used to share data between different parts of a website, subdomains, or even across different web pages. They are commonly used for user sessions, preferences, and other forms of client-side state management.
+
+## document.cookie
+The document.cookie property in JavaScript is used to interact with cookies in a web page. It allows you to read, write, and modify cookies from within a web page's client-side JavaScript code.
+
+Here's how document.cookie works:
+
+Reading Cookies: You can access document.cookie to read the current set of cookies associated with the page. It returns a string that contains all the cookies for the current document, separated by semicolons.
+
+For example, you can read the cookies like this:
+
+```js
+const allCookies = document.cookie;
+```
+Setting Cookies: To set a new cookie, you can assign a string in the format "cookieName=cookieValue" to document.cookie. You can also specify additional attributes like domain, path, expires, and others.
+
+For example, you can set a new cookie like this:
+
+```js
+document.cookie = "myCookie=test; domain=example.com; path=/";
+```
+Modifying Cookies: To modify an existing cookie, you can set a new cookie with the same name. This effectively updates the value of the existing cookie.
+
+For example, to update an existing "myCookie":
+
+```js
+document.cookie = "myCookie=newValue; domain=example.com; path=/";
+```
+Removing Cookies: To remove a cookie, you typically set its expiration date to a date in the past. This tells the browser to remove the cookie.
+
+For example, to remove "myCookie":
+
+```js
+document.cookie = "myCookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=example.com";
+```
+Keep in mind that document.cookie provides a way to work with cookies on the client side. However, there are considerations and limitations, such as security and the ability to access and modify cookies based on their attributes and settings.
