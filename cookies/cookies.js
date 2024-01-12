@@ -1,6 +1,8 @@
 const objectToStore = { id: "example123", points: 50 };
 const objectString = JSON.stringify(objectToStore);
 
+const regex = /^\w+([\.-]?\w+)*(\+\w+)?@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
 // Set a cookie with the JSON string
 document.cookie = `myObject=${objectString}; domain=example.com; path=/`;
 
