@@ -5,7 +5,7 @@ function binarySearch(arr, target) {
     let middle = Math.floor((left+right)/2)
 
     if(arr[middle]===target) {
-      return middle;
+      return [arr[middle], middle];
     } else if (arr[middle] < target) {
       left = middle+1
     } else {
@@ -15,5 +15,9 @@ function binarySearch(arr, target) {
   return -1
 
 }
-function binarySearch2() {}
-function binarySearch3() {}
+
+const testArr = [1,2,3,4,5,6,7,8]
+const testArr2 = [3,8,7,1,2,9,2]
+const target = 2
+
+console.log(binarySearch(testArr2,target));
