@@ -5,7 +5,7 @@
 //arr =[1,2,3,4]
 //should return undefined
 
-const arr = [1,2,2,42,3,4]
+
 //less optimized
 function findRecurring(arr) {
     //loop through the arr
@@ -23,21 +23,45 @@ function findRecurring(arr) {
     //no matches yield undefined
 }
 
-console.log(findRecurring(arr));
+//console.log(findRecurring(arr));
 
-
+const arr = [1,2,2,42,3,4]
 //hashmap faster / optimized
 function findRecurring2(arr) {
-    let map = {};
+    const map = {
+      
+    };
     for (let i = 0; i < arr.length; i++) {
-        if (map[arr[i]] !== undefined){
-            return arr[i]
+
+        if(map[arr[i]]) {
+            map[arr[i]]++
         } else {
-            map[arr[i]] = i;
+            map[arr[i]] = 1
         }
+        // if (map[arr[i]] !== undefined){
+        //     return arr[i]
+        // } else {
+        //     map[arr[i]] = i;
+        // }
         console.log(map);
     }
-    return undefined
+   // return undefined
+   //return parseInt(map[42])
 }
 
 console.log(findRecurring2(arr));
+
+
+function buildAnObjFromArr(arr) {
+    const map = {};
+    for (let i = 0; i < arr.length; i++) {
+
+        if(map[arr[i]]) {
+            map[arr[i]]++
+        } else {
+            map[arr[i]] = 1
+        }
+       
+    }
+    return map
+}
