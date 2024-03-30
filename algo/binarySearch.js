@@ -21,3 +21,22 @@ var search2 = function(nums, target) {
     }
     return -1
 };
+
+function search3(nums, target) {
+    let start;
+    let end = nums.legnt - 1;
+
+    while(start<=end) {
+        let middle = Math.floor((start + end) / 2);
+
+        if(target ===nums[middle]) {
+            return middle;
+        } else if (nums[middle] < target) {
+            start = middle + 1;
+        } else {
+            end = middle -1 ;
+        }
+    }
+
+    return -1;
+}
