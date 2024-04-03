@@ -6,6 +6,10 @@ function eatFruit(fruit) {
     console.log(eat)
 }
 
+fruits.forEach((fruit) => {
+    return `im eating a ${fruit}`
+})
+
 const items = [
     {
         name: 'momo',
