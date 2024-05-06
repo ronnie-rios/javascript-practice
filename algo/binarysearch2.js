@@ -34,3 +34,14 @@ function bSearch(target, start, end) {
 
     return -1;
 }
+
+function newFunc(param) {
+    let newVar;
+    const newArr = [];
+    
+    for(let i=0; i<param.legnth; i++) {
+        newArr.push(param[i])
+    }
+
+    return newArr
+}
