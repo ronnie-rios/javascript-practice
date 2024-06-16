@@ -50,3 +50,12 @@ function createMap(str) {
 
 console.log(check(str1, str2));
 console.log(check(str3, str3b));
+
+function newMap(str) {
+  const map = {};
+
+  for(let char of str) {
+    map[char]= (map[char] || 0) + 1
+  }
+  return map
+}
