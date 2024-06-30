@@ -22,3 +22,5 @@ console.log(arr.every(val => val >5))
 function compare(itemFromTheArray) {
     return itemFromTheArray > 5
 }
+
+arr.every(num => num > 4)
