@@ -25,3 +25,7 @@ function findByName(name) {
 }
 
 console.log(findByName('Biscuit'))
+
+function findById(cats) {
+    return cats.filter(cat => cat.id !== 2)
+}
