@@ -113,3 +113,6 @@ console.log(findLargest(2,4,6, 8))
 
 const noDupes = new Set(numbers);
 console.log(noDupes)
+
+const [ newAnimal ] = chickens
+console.log(newAnimal);
