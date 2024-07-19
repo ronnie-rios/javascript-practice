@@ -116,3 +116,18 @@ console.log(noDupes)
 
 const [ newAnimal ] = chickens
 console.log(newAnimal);
+
+
+function newMap(hmm) {
+    const newMap = {};
+
+    for(let i =0; i <hmm.length; i++) {
+        if(!newMap[hmm]) {
+            newMap[hmm] = 1
+        } else {
+            newMap[hmm]++
+        }
+        return newMap
+    }
+}
+
