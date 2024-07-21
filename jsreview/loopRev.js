@@ -11,3 +11,12 @@ function basicLoop(nums) {
     }
 }
 basicLoop(nums)
+
+function prac(nums) {
+    for(const num in nums){
+        nums[num]++
+    }
+    return nums
+}
+
+const newNews = prac(nums);
