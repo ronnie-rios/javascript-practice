@@ -20,3 +20,4 @@ function prac(nums) {
 }
 
 const newNews = prac(nums);
+console.log(newNews);
