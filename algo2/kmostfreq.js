@@ -55,3 +55,4 @@ function findMostFreq(arr, k) {
 }
 
 console.log(findMostFreq(arr1, k1));
+console.log(findMostFreq(arr1, k1));
