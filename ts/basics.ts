@@ -26,3 +26,11 @@ const ids: Record<number, string> = {
   20: "20"
 }
 console.log(chicken);
+
+for(let i= 0; i<10; i++) {
+  console.log(i); //inferred to be a number
+}
+
+[1,2,3,4].forEach(num => console.log(num)); //inferred to be a num from the array since the arr has nums
+
+[4,5,6,7].map(num => num*2) // again infers the param and output to be a num
