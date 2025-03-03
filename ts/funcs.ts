@@ -33,3 +33,8 @@ export function createAdd2(num: number): addFuncType {
 
 const addOne = createAdd(1);
 console.log(addOne(2));
+
+function genNum(num: number): number {
+  let rando = Math.random()
+  return rando;
+}
