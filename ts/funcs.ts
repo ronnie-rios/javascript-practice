@@ -38,3 +38,8 @@ function genNum(num: number): number {
   let rando = Math.random()
   return rando;
 }
+
+
+function arrStuff(arr: string[]): void {
+  console.log(arr);
+}
