@@ -43,3 +43,6 @@ function genNum(num: number): number {
 function arrStuff(arr: string[]): void {
   console.log(arr);
 }
+function arrStuff2(arr: string[]): void {
+  console.log(arr);
+}
