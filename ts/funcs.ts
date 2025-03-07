@@ -46,3 +46,8 @@ function arrStuff(arr: string[]): void {
 function arrStuff2(arr: string[]): void {
   console.log(arr);
 }
+function arrStuff3(arr: string[]): void {
+  console.log(arr);
+}
+
+
