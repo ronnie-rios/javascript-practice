@@ -38,3 +38,11 @@ const digimon: Digimon[] = [
 ]
 
 console.log(ranking(digimon, ( { level }) => level));
+
+
+function forE<T>(items: T[], forEachFunc: (v: T) => void) : void {
+  items.reduce((a, v) => {
+    forEachFunc(v);
+    return undefined;
+  }, undefined)
+}
