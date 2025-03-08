@@ -50,4 +50,5 @@ function arrStuff3(arr: string[]): void {
   console.log(arr);
 }
 
-
+let name: String = `hello world`;
+name = `new name`
