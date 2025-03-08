@@ -10,4 +10,4 @@ function simpleStrState(initial: string): [()=> string, (v: string) => void] {
 
 const [str, str2] = simpleStrState("hi")
 
-//tuples can be an arr that hold different types
+//tuples can be an arr that hold different
