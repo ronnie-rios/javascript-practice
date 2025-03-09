@@ -16,3 +16,12 @@ function twoSum(nums: number[], target: number): number[] {
 }
 
 console.log(twoSum(nums, 9));
+
+
+function reverse(x: number): number {
+  const arrStr: string = x.toString().split('').reverse().join()
+
+  return parseInt(arrStr)
+}
+
+console.log(reverse(331));
